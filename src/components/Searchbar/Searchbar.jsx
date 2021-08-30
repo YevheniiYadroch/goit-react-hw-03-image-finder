@@ -5,16 +5,15 @@ class Searchbar extends Component {
     render() {
         return (
             <header className="Searchbar">
-                <form className="SearchForm">
+                <form className="SearchForm" onSubmit={this.props.onSubmit}>
                     <button type="submit" className="SearchForm-button">
                         <span className="SearchForm-button-label">Search</span>
                     </button>
-
                     <input
                         className="SearchForm-input"
                         type="text"
-                        autocomplete="off"
-                        autofocus
+                        autoComplete="off"
+                        autoFocus
                         placeholder="Search images and photos"
                     />
                 </form>
