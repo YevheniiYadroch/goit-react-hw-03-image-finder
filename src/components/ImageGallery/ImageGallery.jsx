@@ -7,9 +7,7 @@ class ImageGallery extends Component {
         return (
             <ul className="ImageGallery">
                 {this.props.images.map(image => (
-                    <li key={image.id} onClick={this.props.onClick} className="ImageGalleryItem">
-                        <ImageGalleryItem image={image} />
-                    </li>
+                    <ImageGalleryItem key={image.id} image={image} onClick={this.props.onClick} />
                 ))}
             </ul>
         )

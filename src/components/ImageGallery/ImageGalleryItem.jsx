@@ -2,8 +2,11 @@ import { Component } from 'react';
 
 class ImageGalleryItem extends Component {
     render() {
-        return (            
-            <img src={this.props.image.webformatURL} data-image={this.props.image.largeImageURL} alt={this.props.image.tags} className="ImageGalleryItem-image" />
+        console.log(this.props.image.id)
+        return (
+            <li onClick={this.props.onClick} className="ImageGalleryItem">
+                <img src={this.props.image.webformatURL} data-image={this.props.image.largeImageURL} alt={this.props.image.tags} className="ImageGalleryItem-image" />
+            </li>
         )
     }
 }
